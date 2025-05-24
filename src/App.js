@@ -4,11 +4,11 @@ import Main from './component/Main';
 import Footer from './component/Footer';
 function App() {
   return (
-    <>
-    <Header />
-    <Main />
-    <Footer />
-    </>
+    <div className="min-h-screen grid grid-cols-1 place-items-center">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 }
 

@@ -1,13 +1,17 @@
 import React from 'react';
-
+import BookingPage from './BookingPage';
+import Specials from './Specials';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './HomePage';
 
 const Main = () => {
     return (
         <>
-        <div>
-            <h1>Welcome to Little Lemon</h1>
-            <p>Your favorite restaurant for delicious meals.</p>
-        </div>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/specials" element={<Specials />} />
+        </Routes>
         </>
     );
 };
