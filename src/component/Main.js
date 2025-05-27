@@ -8,6 +8,8 @@ import { useState } from 'react';
 import { fetchAPI, submitAPI } from '../utils/api';
 import HomePage from './HomePage';
 import ConfirmedBooking from './ConfirmedBooking';
+import CustomersSay from './CustomersSay';
+import Chicago from './Chicago';
 
 const Main = () => {
     // * State to manage form data for reservations
@@ -41,6 +43,8 @@ const Main = () => {
     };
 
     const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
         time: availableTimes[0],
         date: '',
         guests: 1,
@@ -69,10 +73,24 @@ const Main = () => {
     };
 
     return (
-
         <>
         <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={
+                <div className="w-full">
+                    <div className="w-full">
+                        <HomePage />
+                    </div>
+                    <div className="w-[70%] mx-auto mt-20">
+                        <Specials />
+                    </div>
+                    <div className="w-full mx-auto mt-20 bg-gray">
+                        <CustomersSay />
+                    </div>
+                    <div className="w-full mx-auto mt-20 bg-gray">
+                        <Chicago />
+                    </div>
+                </div>
+            } />
             <Route path="/booking" element={<BookingPage formData={formData}  />} />
             <Route path="/specials" element={<Specials />} />
             <Route path='/confirmation' element={<ConfirmedBooking />} />
