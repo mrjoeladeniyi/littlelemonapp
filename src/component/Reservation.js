@@ -50,7 +50,7 @@ const BookingForm = ({formData, handleChange, availableTimes, updateTimes, submi
             onSubmit={handleSubmit}
         >
             {({ errors, touched, setFieldValue }) => (
-                <Form className="w-[90%] h-[70%] md:h-[70%] sm:h-[80%] sm:w-[90%] md:w-[50%] lg:w-[50%] xl:w-[20%] mx-auto p-4 sm:p-6 bg-white rounded-lg shadow-md mt-20 sm:mt-24 md:mt-32" data-testid="reservation-form">
+                <Form className="w-[90%] h-[80%] md:h-auto sm:h-[80%] lg:h-[600px] sm:w-[90%] md:w-[50%] lg:w-[50%] xl:w-[20%] mx-auto p-4 sm:p-6 bg-white rounded-lg shadow-md mt-24 sm:mt-24 md:mt-32 mb-20" data-testid="reservation-form">
                     <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Reservation Details</h2>
                     
                     {/* Name fields container */}
