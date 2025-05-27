@@ -57,9 +57,8 @@ const Main = () => {
 
     const navigate = useNavigate();
 
-    const submitForm = (e) => {
-        e.preventDefault();
-        const isSuccess = submitAPI(formData);
+    const submitForm = (values) => {
+        const isSuccess = submitAPI(values);
         if (isSuccess) {
             // Navigate to confirmation page only if submission is successful
             navigate('/confirmation');
